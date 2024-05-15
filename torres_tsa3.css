@@ -1,0 +1,61 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    text-align: center;
+    background-image: url(https://wallpapercave.com/wp/wp12601023.jpg);
+    background-repeat: no-repeat;
+    background-size:cover ;
+img{
+    width: 230px; 
+    height: 80px;
+    margin-left:1300 ;
+    margin-bottom: 8;
+    margin-top: 14;
+}
+
+    .heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size:100px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: bold;
+        line-height: 2;
+        color:dimgrey
+    }
+
+    .subheading{
+        margin-top: 0;
+        font-size:40px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 0;
+        margin-bottom: 80;
+
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        padding-left: 15%;
+        padding-right: 15%;
+        color: rgba(0, 0, 0, 0.8); 
+        display: inline-block;
+        border-radius: 10px;
+        text-align: center;
+        text-shadow: -1px -1px 0 #fff,  
+                      1px -1px 0 #fff,
+                     -1px  1px 0 #fff,
+                      1px  1px 0 #fff; 
+    }
+    
+    
+    
+    
+}
+
