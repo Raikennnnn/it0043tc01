@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 20px; /* Add padding to prevent content from touching the edges */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%; /* Make the container take full width */
+    max-width: 1200px; /* Set a max-width to control layout on large screens */
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8jpdk708kSMIn_VNci0Rs6LWbZdsIT-82-IlB7oMPlseBBhumXUZCC4zFE_Ma9y0V4g&usqp=CAU') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    height: 200px;
+    overflow: hidden;
+    background: none; /* Remove the background image from the .image div */
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow behind the Pokémon images */
+}
+
+.details {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 15px 15px;
+}
+
+.details .type,
+.details .type1,
+.details .type2,
+.details .desc {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.details .buttons {
+    margin-top: 20px;
+}
+
+.details .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow behind buttons */
+}
+
+.details .buttons button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.darkgreen {
+    background-color: #004d00;
+}
+
+.grass {
+    background-color: #78c850;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.black {
+    background-color: #3c3f3c;
+}
+
+.fighting {
+    background-color: #C22E28;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.gray {
+    background-color: #910505;
+}
+
+.normal {
+    background-color: #A8A77A;
+}
+
+.blue {
+    background-color: #3e33d8;
+}
+
+.water {
+    background-color: #6390F0;
+}
+
+.dark {
+    background-color: #705746;
+}
+
+.yellow {
+    background-color: #ff7300;
+}
+
+.steel {
+    background-color: #B7B7CE;
+}
+
+.purple {
+    background-color: #480079;
+}
+
+.fire {
+    background-color: #EE8130;
+}
+
+.add {
+    background-color: #91908d;
+}
+
+.add:hover {
+    background-color: #444442;
+}
