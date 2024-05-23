@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg) no-repeat center center;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d7abe66a-6a6c-4138-8b79-cc38f0fe318e/ddzlix9-8ba39ba8-8232-4a59-bff9-78180375c022.png/v1/fit/w_828,h_466,q_70,strp/pokemon_jhoto___ecruteak_city_burned_tower_by_billstandish_ddzlix9-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZDdhYmU2NmEtNmE2Yy00MTM4LThiNzktY2MzOGYwZmUzMThlXC9kZHpsaXg5LThiYTM5YmE4LTgyMzItNGE1OS1iZmY5LTc4MTgwMzc1YzAyMi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.8woEzj7UQjl-3FnWl8doFaZ_ZxcfzI59igZVdq7yL98') no-repeat center center;
     background-size: cover;
     padding: 20px; /* Add padding to prevent content from touching the edges */
 }
