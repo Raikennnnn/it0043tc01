@@ -28,7 +28,7 @@ body{
 
 .box{
     padding: 20px;
-    width: 305px;
+    width: 350px;
     vertical-align: center;
     display: flex;
     flex-grow: 1;
