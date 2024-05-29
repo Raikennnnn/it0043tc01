@@ -6,7 +6,7 @@
 }
 
 body{
-     background-color: #021076;
+     background-color: darkblue;
 }
 
 .container{
@@ -17,7 +17,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #222222;
+    background-image: url(BACKGROUND.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
