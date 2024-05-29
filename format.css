@@ -21,7 +21,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-image: url(BACKGROUND.jpg);
+    background-color: #222222;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
