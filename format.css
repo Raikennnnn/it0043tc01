@@ -33,7 +33,7 @@ body{
 
 .box{
     padding: 20px;
-    width: 300px;
+    width: 250px;
     vertical-align: center;
     display: flex;
     flex-grow: 1;
