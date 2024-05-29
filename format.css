@@ -196,7 +196,7 @@ img{
 }
 
 .fire{
-    background-color: red;
+    background-color: #EE8130;
 }
 
 .grass{
@@ -221,4 +221,8 @@ img{
 
 .water{
     background-color: #6390F0;
+}
+
+.dragon{
+    background-color: #6F35FC;
 }
