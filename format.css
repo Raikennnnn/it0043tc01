@@ -1,154 +1,224 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 1s ease;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/204364595/original/86db6005cd51b4f60e71cca277f603a82cf5646a/draw-a-pixel-pokemon-battle-background.png') no-repeat center center fixed;
-    background-size: cover;
+body{
+    background-color: lightblue;
 }
 
-.container {
+.container{
+    max-width: 90vw;
+    margin: 1rem auto;
+    padding: 20px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    transition: all 0.5s ease;
+    justify-content: space-evenly;
+    background: url(background.png)
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    gap: 20px;
+
 }
 
-.pokemon {
-    flex: 1 0 21%;
-    margin: 10px;
+.box{
+    padding: 20px;
+    width: 300px;
+    vertical-align: center;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img{
+    width: 100%;
+}
+
+
+.box1{
+    background-color: #d3964c;
+}
+
+.box2{
+    background-color:#e2b90e;
+}
+
+.box3{
+    background-color: #fff800;
+}
+
+.box4{
+    background-color: #6adb9a;
+}
+
+.box5{
+    background-color:#83d839;
+}
+
+.box6{
+    background-color:  #f77819;
+}
+
+.box7{
+    background-color:#42b1e8;
+}
+
+.box8{
+    background-color: #efa3cc;
+}
+
+.box9{
+    background-color:  #f4d3a2;
+}
+
+.box10{
+    background-color:#eae4c5;
+}
+
+.box11{
+    background-color: #f4c4b3;
+}
+
+.box12{
+    background-color: #0d5c9e;
+}
+
+p{
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: Verdana;
+}
+
+.types{
+    display: none;
+    text-align: center;
+}
+
+#pokeball{
+    display: none;
+    width: 70px;
+    height: 60px;
+
+}
+
+@media(max-width:1117px){
+    .box{
+    display: flex;
+    padding: 20;
+    width: 500px;
+    vertical-align: center;
+    flex-grow: 1;
+    }
+    
+.box:hover{
+    background-image: url(overallhover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p, #pokeball{
+    display: inline-block;
+}
+
+img{
+    width: 100px;
+}
+
+}
+
+@media(max-width:500px){
+    .box{
+    padding: 20px;
+    width: 250px;
+    vertical-align: center;
+    flex-grow: 1;
+    flex-direction: column;
+    }
+    
+
+.box:hover{
+    background-image: url(pbg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pokeball{
+    display: none;
+}
+
+p {
+    display: inline-block;
+}
+
+img{
+    width: 100px;
+}
+
+.types{
+    width: 100%;
+    margin: 0 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    transition: all 0.5s ease;
-    background-size: cover;
-    cursor: pointer;
-    border-radius: 10px;
 }
 
-.pokemon img {
-    width: 100px;
-    height: 100px;
+.type1, .type2{
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    flex-grow: 1;
 }
 
-.pokemon .name {
-    display: none;
 }
 
-.pokemon .pokeball {
-    display: none;
+.normal{
+    background-color: #A8A77A;
 }
 
-@media (max-width: 900px) {
-    .pokemon {
-        flex: 1 0 28%;
-    }
-    .pokemon1 { background-color: #d3964c; }
-    .pokemon2 { background-color: #e2b90e; }
-    .pokemon3 { background-color: #fff800; }
-    .pokemon4 { background-color: #6adb9a; }
-    .pokemon5 { background-color: #83d839; }
-    .pokemon6 { background-color: #f77819; }
-    .pokemon7 { background-color: #42b1e8; }
-    .pokemon8 { background-color: #efa3cc; }
-    .pokemon9 { background-color: #f4d3a2; }
-    .pokemon10 { background-color: #eae4c5; }
-    .pokemon11 { background-color: #f4c4b3; }
-    .pokemon12 { background-color: #0d5c9e; }
+.fairy{
+    background-color: #D685AD;
 }
 
-@media (max-width: 600px) {
-    .pokemon {
-        flex: 1 0 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .pokemon .name {
-        display: block;
-    }
-    .pokemon .pokeball {
-        display: block;
-        width: 30px;
-        height: 30px;
-    }
+.psychic{
+    background-color: #F95587;
 }
 
-@media (max-width: 400px) {
-    .pokemon {
-        flex-direction: column;
-        align-items: center;
-    }
-    .pokemon .pokeball {
-        display: none;
-    }
+.fire{
+    background-color: red;
 }
 
-.pokemon1:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149694919.jpg?w=900&t=st=1716945889~exp=1716946489~hmac=940640e8fdef5024efbcdb976be5adf0b9c1650e7b8343d1a1be3808d53c9d76') no-repeat center center;
-    background-size: cover;
+.grass{
+    background-color: #7AC74C;
 }
 
-.pokemon2:hover {
-    background: url('https://img.freepik.com/free-vector/abstract-halftone-wallpaper_23-2148576583.jpg?w=900&t=st=1716945876~exp=1716946476~hmac=cedbc411361b7fd3d8ad4bc395423d9a9972e409ec4fe28a87481788bf9bf2e1') no-repeat center center;
-    background-size: cover;
+.poison{
+    background-color: #A33EA1;
 }
 
-.pokemon3:hover {
-    background: url('https://img.freepik.com/free-vector/hand-drawn-zoom-effect-background_23-2149703162.jpg?w=900&t=st=1716945841~exp=1716946441~hmac=e1639cfc50e821985cf2c9ca44f9e8cd1d5c811a657d9ba87990f56266748780') no-repeat center center;
-    background-size: cover;
+.fighting{
+    background-color: #C22E28;
 }
 
-.pokemon4:hover {
-    background: url('https://img.freepik.com/free-vector/comic-paper-background_23-2148921150.jpg?w=900&t=st=1716945625~exp=1716946225~hmac=11e887a833d19363ca6c3fa2e669431d86a0accbf442ee6392392b8f4d5053b2') no-repeat center center;
-    background-size: cover;
+.electric{
+    background-color: #fff800;
 }
 
-.pokemon5:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149722802.jpg?w=900&t=st=1716945589~exp=1716946189~hmac=04ec32592bb8a592bef19b0fd5ea714b65c0fee0a51369fa2b14482f1cf0c32e') no-repeat center center;
-    background-size: cover;
+.bug{
+    background-color: #A6B91A;
 }
 
-.pokemon6:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-red-background_23-2149762306.jpg?w=900&t=st=1716945692~exp=1716946292~hmac=0061bb33a4470e016c3f9c2ae994bec961343d2b1c5785400697f28e8a181555') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon7:hover {
-    background: url('https://img.freepik.com/free-vector/flat-comic-style-wallpaper_23-2148798207.jpg?w=900&t=st=1716945709~exp=1716946309~hmac=9eee6156b685999be2e4843d1fe8373ae67fd96bd709f9e23ee3d690855bff5f') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon8:hover {
-    background: url('https://img.freepik.com/free-vector/flat-design-comic-style-background_23-2148810918.jpg?w=900&t=st=1716945778~exp=1716946378~hmac=01317895d3a9f0344e84224e776e21cc48e0c03a948748ce6131a84984e0afbe') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon9:hover {
-    background: url('https://img.freepik.com/free-vector/flat-comic-style-wallpaper_23-2148818640.jpg?w=900&t=st=1716945355~exp=1716945955~hmac=87e73e564caf92cfd62bd8ae85db5ec3352fefc4c15418ed7e5846a73fe685ce') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon10:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149735597.jpg?w=900&t=st=1716945397~exp=1716945997~hmac=526cdde06a7370053480d922ebae4964f66efac212ec5344e9921166c0eeb635') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon11:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149751055.jpg?w=900&t=st=1716945436~exp=1716946036~hmac=8921c84e5f42b277ed0292edff4861ad09a8dde337268a79dcc9a85ac25d667a') no-repeat center center;
-    background-size: cover;
-}
-
-.pokemon12:hover {
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149751078.jpg?w=900&t=st=1716945471~exp=1716946071~hmac=a50a8672ac00813c8e0aa862cd61a79e2a0a6d0276bf7de235e757572bd9f50d') no-repeat center center;
-    background-size: cover;
+.water{
+    background-color: #6390F0;
 }
