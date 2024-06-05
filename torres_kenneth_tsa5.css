@@ -3,7 +3,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body, html {
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -17,165 +17,180 @@ body, html {
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     padding: 10px;
-    border: 5px solid black;
     height: 100vh;
     width: 100vw;
 }
 
 .character {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
+    border: 3px solid black;
     padding: 10px;
     box-sizing: border-box;
-    height: 100%;
-    width: 100%;
     border-radius: 15px;
 }
 
 .character img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    color: white;
+    margin-left: 10px;
 }
 
 .name {
+    font-size: 30px;
     font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.description {
+    text-align: center;
     color: white;
 }
 
-.squall .name{
-    color:black
+.paragraph {
+    text-align: justify;
+    color: white;
 }
 
-.squall .info{
-    color:black
-}
-
-.vincent {
+#vincent {
     grid-column: 1 / 3;
     grid-row: 1;
     background-color: #203864;
-    flex-direction: column;
-    text-align: center;
 }
 
-.vincent img{
-    margin-bottom: 10px;
-}
-
-.cloud {
+#cloud {
+    grid-column: 3 / 4;
+    grid-row: 1;
     background-color: #404040;
-    flex-direction: column;
-    text-align: center;
 }
 
-.sephiroth {
+#sephiroth {
+    grid-column: 1 / 2;
+    grid-row: 2/3;
     background-color: #74508a;
-    flex-direction: column;
-    text-align: center;
 }
 
-.cloud img{
-    margin: 0 auto 10px auto;
-}
-
-.sephiroth img{
-    margin: 0 auto 10px auto;
-}
-
-.noctis {
+#noctis {
     grid-column: 2 / 4;
     grid-row: 2;
     background-color: #203864;
-    flex-direction: column;
-    text-align: center;
-}
-.noctis .name{
-    flex-direction: row;
-    text-align: center;
 }
 
-.noctis img{
-    margin-bottom: 10px;
-}
-
-.squall {
-    grid-column: 4;
+#squall {
+    grid-column: 4 / 5;
     grid-row: 1 / 3;
     background-color: #fff2cc;
-    flex-direction: column;
-    text-align: center;
 }
 
-@media (max-width: 1024px) {
+#cloud .details,
+#sephiroth .details,
+#squall .details{
+    flex-direction: column;
+}
+
+#squall .name,
+#squall .paragraph {
+    color: black;
+}
+
+#squall .description{
+    color: black;
+}
+
+@media (max-width: 1200px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
 
-    .character {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .vincent {
+    #vincent {
         grid-column: 1 / 2;
-        grid-row: 1;
-
+        grid-row: 1/2;
     }
-
-    .cloud {
+    
+    #cloud {
         grid-column: 2 / 3;
-        grid-row: 1;
-
+        grid-row: 1/2;
     }
-
-    .sephiroth{
+    
+    #sephiroth {
         grid-column: 1 / 2;
-        grid-row: 2;
-  
+        grid-row: 2/3;
     }
-
-    .noctis {
+    
+    #noctis {
         grid-column: 2 / 3;
-        grid-row: 2;
-
+        grid-row: 2/3;
     }
-
-    .squall {
+    
+    #squall {
         grid-column: 1 / 3;
-        grid-row: 3;
+        grid-row: 3 /4;
+    }
+    
+    #vincent .details,
+    #noctis .details{
         flex-direction: column;
-  
+    }
+    
+    #squall .details{
+        flex-direction: row;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
     }
-
-    .character {
-        flex-direction: column;
-        text-align: center;
+    
+    #vincent {
+        grid-column: 1 / 2;
+        grid-row: 1/2;
+    }
+    
+    #cloud {
+        grid-column: 1 / 2;
+        grid-row: 2/3;
+    }
+    
+    #sephiroth {
+        grid-column: 1 / 2;
+        grid-row: 3/4;
+    }
+    
+    #noctis {
+        grid-column: 1 / 2;
+        grid-row: 4/5;
+    }
+    
+    #squall {
+        grid-column: 1 / 2;
+        grid-row: 5/6;
     }
 
-    .character img {
-        margin: 0 0 10px 0;
-    }
 
-    .vincent, .cloud, .sephiroth, .noctis, .squall {
-        grid-column: 1;
-        grid-row: auto;
+    #vincent .details,
+    #noctis .details,
+    #cloud .details,
+    #sephiroth .details,
+    #squall .details{
+        flex-direction: row;
     }
 }
