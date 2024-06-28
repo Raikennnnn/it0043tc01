@@ -4,75 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Simulator</title>
-    <link rel="stylesheet" href="torres_tsa7.css">
+    <link rel="stylesheet" href="torres_taruc_tsa7.css">
 </head>
 <body>
-    <div class="container">
-        <div class="controls">
-            <button id="reset-flexbox" class="violet-button">Reset Flexbox</button>
-            
-            <div class="control-group gap-group">
-                <input type="number" id="gap" name="gap" min="0" value="0">
-                <label for="gap" class="violet-label">Gap</label>
+    <div class="wrapper">
+        <div class="container">
+            <div class="controls-container">
+                <div class="controls">
+                    <button id="reset-flexbox" class="flex-button">Reset Flexbox</button>
+                    
+                    <div class="control-group gap-group">
+                        <input type="number" id="gap" name="gap" min="0" value="0">
+                        <label for="gap" class="flex-button">Gap</label>
+                    </div>
+                    
+                    <div class="control-panel">
+                        <div class="control-group">
+                            <h3>Flex Direction</h3>
+                            <div class="button-group">
+                                <label class="flex-button" data-value="row">Row</label>
+                                <label class="flex-button" data-value="column">Column</label>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Justify Content</h3>
+                            <div class="button-group">
+                                <label class="flex-button" data-value="flex-start">Start</label>
+                                <label class="flex-button" data-value="center">Center</label>
+                                <label class="flex-button" data-value="flex-end">End</label>
+                                <label class="flex-button" data-value="space-between">Space Between</label>
+                                <label class="flex-button" data-value="space-around">Space Around</label>
+                                <label class="flex-button" data-value="space-evenly">Space Evenly</label>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Align Items</h3>
+                            <div class="button-group">
+                                <label class="flex-button" data-value="flex-start">Start</label>
+                                <label class="flex-button" data-value="center">Center</label>
+                                <label class="flex-button" data-value="flex-end">End</label>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Flex Grow</h3>
+                            <button id="reset-grow" class="flex-button">Reset</button>
+                            <button id="grow-all" class="flex-button">Grow All</button>
+                            <div class="grow-input-group">
+                                <input type="number" id="grow1" name="grow1" min="0" value="0">
+                                <label for="grow1" class="flex-button">Grow B-1</label>
+                            </div>
+                            <div class="grow-input-group">
+                                <input type="number" id="grow2" name="grow2" min="0" value="0">
+                                <label for="grow2" class="flex-button">Grow B-2</label>
+                            </div>
+                            <div class="grow-input-group">
+                                <input type="number" id="grow3" name="grow3" min="0" value="0">
+                                <label for="grow3" class="flex-button">Grow B-3</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="violet-box">
-                <div class="control-group">
-                    <h3>Flex Direction</h3>
-                    <div class="button-group">
-                        <label class="violet-label" data-value="row">Row</label>
-                        <label class="violet-label" data-value="column">Column</label>
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <h3>Justify Content</h3>
-                    <div class="button-group">
-                        <label class="violet-label" data-value="flex-start">Start</label>
-                        <label class="violet-label" data-value="center">Center</label>
-                        <label class="violet-label" data-value="flex-end">End</label>
-                        <label class="violet-label" data-value="space-between">Space Between</label>
-                        <label class="violet-label" data-value="space-around">Space Around</label>
-                        <label class="violet-label" data-value="space-evenly">Space Evenly</label>
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <h3>Align Items</h3>
-                    <div class="button-group">
-                        <label class="violet-label" data-value="flex-start">Start</label>
-                        <label class="violet-label" data-value="center">Center</label>
-                        <label class="violet-label" data-value="flex-end">End</label>
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <h3>Flex Grow</h3>
-                    <button id="reset-grow" class="violet-button">Reset</button>
-                    <button id="grow-all" class="violet-button">Grow All</button>
-                    <div class="grow-input-group">
-                        <input type="number" id="grow1" name="grow1" min="0" value="0">
-                        <label for="grow1" class="violet-label">Grow B-1</label>
-                    </div>
-                    <div class="grow-input-group">
-                        <input type="number" id="grow2" name="grow2" min="0" value="0">
-                        <label for="grow2" class="violet-label">Grow B-2</label>
-                    </div>
-                    <div class="grow-input-group">
-                        <input type="number" id="grow3" name="grow3" min="0" value="0">
-                        <label for="grow3" class="violet-label">Grow B-3</label>
-                    </div>
-                </div>
+            <div class="flex-container" id="flex-container">
+                <div class="flex-item" id="item1" style="background-color: #5b5dff;">1</div>
+                <div class="flex-item" id="item2" style="background-color: #3f0aff;">2</div>
+                <div class="flex-item" id="item3" style="background-color: #0011aa;">3</div>
             </div>
-        </div>
-        
-        <div class="flex-container" id="flex-container">
-            <div class="flex-item" id="item1" style="background-color: #DAA06D	;">1</div>
-            <div class="flex-item" id="item2" style="background-color: #D27D2D	;">2</div>
-            <div class="flex-item" id="item3" style="background-color: #F88379;">3</div>
         </div>
     </div>
-
-    <script src="torres_tsa7.js"></script>
+    <script src="torres_taruc_tsa7.js"></script>
 </body>
 </html>
