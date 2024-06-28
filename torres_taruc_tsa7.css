@@ -22,19 +22,25 @@ body {
 
 .container {
     display: flex;
+    flex-direction: row;
     width: 80%;
     height: 80%;
+    max-width: 1200px;
+    max-height: 800px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     overflow: hidden;
+    background-color: white;
 }
 
 .controls-container {
     display: flex;
+    flex-direction: column;
     width: 40%;
     height: 100%;
     box-sizing: border-box;
     background-color: rgb(36, 35, 35);
+    overflow-y: auto;
 }
 
 .controls {
@@ -43,8 +49,9 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 20px;
-    color: black;
+    color: white;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .control-group {
@@ -65,7 +72,7 @@ body {
 
 .gap-group input {
     width: 50px;
-    margin-right: 40px;
+    margin-right: 10px;
     height: 25px;
     align-items: center;
 }
@@ -87,10 +94,11 @@ body {
     cursor: pointer;
     text-align: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .flex-button.active {
-    background-color: #200092;
+    background-color: #0044cc;
 }
 
 .flex-button:hover {
@@ -113,12 +121,14 @@ body {
     height: 100%;
     border: 10px solid rgb(36, 35, 35);
     background-color: rgb(66, 66, 66);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .flex-item {
     flex: 1;
     border: 1px solid rgb(121, 121, 121);
-    padding: 50px;
+    padding: 30px;
     text-align: center;
     box-sizing: border-box;
 }
