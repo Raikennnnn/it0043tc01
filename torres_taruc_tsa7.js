@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('item2').style.flexGrow = document.getElementById('grow2').value;
         document.getElementById('item3').style.flexGrow = document.getElementById('grow3').value;
         
-        document.documentElement.style.setProperty('--bg-opacity', bgOpacityInput.value);
     }
 
     gapInput.addEventListener('input', updateFlexbox);
