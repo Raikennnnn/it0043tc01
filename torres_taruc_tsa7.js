@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gapInput = document.getElementById('gap');
-    const directionLabels = document.querySelectorAll('.control-group:nth-of-type(1) .violet-label');
-    const justifyContentLabels = document.querySelectorAll('.control-group:nth-of-type(2) .violet-label');
-    const alignItemsLabels = document.querySelectorAll('.control-group:nth-of-type(3) .violet-label');
+    const directionLabels = document.querySelectorAll('.control-group:nth-of-type(1) .flex-button');
+    const justifyContentLabels = document.querySelectorAll('.control-group:nth-of-type(2) .flex-button');
+    const alignItemsLabels = document.querySelectorAll('.control-group:nth-of-type(3) .flex-button');
     const growInputs = document.querySelectorAll('input[type="number"]');
     const resetButton = document.getElementById('reset-grow');
     const growAllButton = document.getElementById('grow-all');
     const resetFlexboxButton = document.getElementById('reset-flexbox');
     const flexContainer = document.getElementById('flex-container');
+    const bgOpacityInput = document.getElementById('bg-opacity');
 
     let flexDirection = 'row';
     let justifyContent = 'flex-start';
@@ -24,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('item1').style.flexGrow = document.getElementById('grow1').value;
         document.getElementById('item2').style.flexGrow = document.getElementById('grow2').value;
         document.getElementById('item3').style.flexGrow = document.getElementById('grow3').value;
+        
+        // Update background opacity
+        document.documentElement.style.setProperty('--bg-opacity', bgOpacityInput.value);
     }
 
     gapInput.addEventListener('input', updateFlexbox);
@@ -82,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
         directionLabels.forEach(lbl => lbl.classList.remove('active'));
         justifyContentLabels.forEach(lbl => lbl.classList.remove('active'));
         alignItemsLabels.forEach(lbl => lbl.classList.remove('active'));
-        document.querySelector('.control-group:nth-of-type(1) .violet-label[data-value="row"]').classList.add('active');
-        document.querySelector('.control-group:nth-of-type(2) .violet-label[data-value="flex-start"]').classList.add('active');
-        document.querySelector('.control-group:nth-of-type(3) .violet-label[data-value="flex-start"]').classList.add('active');
+        document.querySelector('.control-group:nth-of-type(1) .flex-button[data-value="row"]').classList.add('active');
+        document.querySelector('.control-group:nth-of-type(2) .flex-button[data-value="flex-start"]').classList.add('active');
+        document.querySelector('.control-group:nth-of-type(3) .flex-button[data-value="flex-start"]').classList.add('active');
         updateFlexbox();
     });
 
-    document.querySelector('.control-group:nth-of-type(1) .violet-label[data-value="row"]').classList.add('active');
-    document.querySelector('.control-group:nth-of-type(2) .violet-label[data-value="flex-start"]').classList.add('active');
-    document.querySelector('.control-group:nth-of-type(3) .violet-label[data-value="flex-start"]').classList.add('active');
+    document.querySelector('.control-group:nth-of-type(1) .flex-button[data-value="row"]').classList.add('active');
+    document.querySelector('.control-group:nth-of-type(2) .flex-button[data-value="flex-start"]').classList.add('active');
+    document.querySelector('.control-group:nth-of-type(3) .flex-button[data-value="flex-start"]').classList.add('active');
     updateFlexbox();
 });
