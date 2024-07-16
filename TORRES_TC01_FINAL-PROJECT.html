@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Portfolio</title>
+    <link rel="stylesheet" href="TORRES_TC01_FINAL-PROJECT.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu menu-type-2">
+                <input type="checkbox" id="btn-2">
+                <label for="btn-2"></label>
+            </div>
+            <ul>
+                <li><a href="TORRES_TC01_FINAL-PROJECT.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="background">
+        <div class="content">
+            <img src="ken2-removebg-preview.png" alt="Your Picture" class="profile-picture">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my journey, skills, and work.</p>
+            <a href="portfolio.html" class="view-work">View My Work</a>
+        </div>
+    </section>
+
+    <section id="target">
+        <ul>
+            <li><a href="TORRES_TC01_FINAL-PROJECT.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <ul class="social-media">
+            <li><a href="https://x.com/Hrtlss_Ken?t=DT3Wlg3euCwS6heHUggsOA&s=09"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/rai__ken?igsh=YTl1djByb3U4dGt1"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://github.com/Raikennnnn"><i class="fab fa-github"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="TORRES_TC01_FINAL-PROJECT.js"></script>
+    <script>
+    "use strict";
+    const btn2 = document.getElementById("btn-2");
+    const target = document.getElementById("target");
+
+    btn2.addEventListener("change", () => {
+        target.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>
